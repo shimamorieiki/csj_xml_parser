@@ -6,10 +6,10 @@ Returns:
 
 from xml.etree.ElementTree import Element
 
-from ...daos.core.trans_suw import DaoTransSuw
 from ...dtos.core.suw import DtoSuwCore
 from ...dtos.core.trans_suw import DtoTransSuw
 from .base import DaoBase
+from .trans_suw import DaoTransSuw
 
 
 class DaoSuwCore(DaoBase):

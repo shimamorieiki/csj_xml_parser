@@ -3,7 +3,7 @@
 from .suw import DtoSuwCore
 
 
-class DtoLuwCore:
+class DtoLuw:
     """_summary_
     suwタグの要素
     """

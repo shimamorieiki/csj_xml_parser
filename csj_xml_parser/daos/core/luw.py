@@ -6,7 +6,7 @@ Returns:
 
 from xml.etree.ElementTree import Element
 
-from ...dtos.core.luw import DtoLuwCore
+from ...dtos.core.luw import DtoLuw
 from ...dtos.core.suw import DtoSuwCore
 from .base import DaoBase
 from .suw import DaoSuwCore
@@ -17,7 +17,7 @@ class DaoLuw(DaoBase):
     CSJのIPU単位を扱うクラス
     """
 
-    def parse(self, luw_element: Element) -> DtoLuwCore:
+    def parse(self, luw_element: Element) -> DtoLuw:
         """[summary]
         .xmlファイルからsuwのリストを取得する
         Args:
@@ -48,7 +48,7 @@ class DaoLuw(DaoBase):
             for suw_element in luw_element.iter("SUW")
         ]
 
-        return DtoLuwCore(
+        return DtoLuw(
             is_new_line=is_new_line,
             luw_dictionary_form=luw_dictionary_form,
             luw_id=luw_id,
